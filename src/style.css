@@ -3,18 +3,68 @@
 }
 
 .items {
-	width: 800px;
+	width: 1000px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	gap: 4px;
 	/* Обязательно задается фиксированная высота */
-	height: 500px;
+	height: 1000px;
 }
 
 .item {
-	width: calc(100% / 3);
+	width: calc(100% / 5);
+}
+
+/* .item:nth-child(3n + 1) {
+	order: 1;
+	border: 5px solid red;
+}
+.item:nth-child(3n + 2) {
+	order: 2;
+	border: 5px solid green;
+}
+.item:nth-child(3n) {
+	order: 3;
+	border: 5px solid orange;
+} */
+
+/* .items::before,
+.items::after {
+	content: '';
+	flex-basis: 100%;
+	width: 2px;
+	background-color: blue;
+	order: 2;
+} */
+
+.item:nth-child(5n + 1) {
+	order: 1;
+	border: 5px solid red;
+}
+.item:nth-child(5n + 2) {
+	order: 2;
+	border: 5px solid green;
+}
+.item:nth-child(5n + 3) {
+	order: 3;
+	border: 5px solid black;
+}
+.item:nth-child(5n + 4) {
+	order: 4;
+	border: 5px solid #f64f4f;
+}
+.item:nth-child(5n) {
+	order: 5;
+	border: 5px solid orange;
+}
+
+.item.break {
+	flex-basis: 100%;
+	width: 0;
+	padding: 0;
+	border: 0;
 }
 
 .item {
