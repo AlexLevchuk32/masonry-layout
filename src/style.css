@@ -83,3 +83,34 @@
 .item:nth-child(4n) {
 	background-color: lightcoral;
 }
+
+.news {
+	width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 30px;
+	/* Обязательно задается фиксированная высота */
+	height: 2668px;
+}
+.news-item {
+	display: block;
+	width: calc(100% / 3);
+}
+.news-item:nth-child(3n + 1) {
+	order: 1;
+}
+.news-item:nth-child(3n + 2) {
+	order: 2;
+}
+.news-item:nth-child(3n) {
+	order: 3;
+}
+
+.news-item.break {
+	flex-basis: 100%;
+	width: 0;
+	padding: 0;
+	border: 0;
+}
